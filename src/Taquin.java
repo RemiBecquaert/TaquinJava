@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class Taquin extends JDialog {
     private JPanel contentPane;
-    private JList<JButton> listeDeBoutons;
+    private JList listeDeBoutons;
+    private JButton recommencerButton;
+    private ArrayList<JButton> liste;
 
 
     public static void main(String[] args) {
@@ -17,7 +19,8 @@ public class Taquin extends JDialog {
     public Taquin() {
         setContentPane(contentPane);
         setModal(true);
-        initTableau();
+        listeDeBoutons = new JList();
+        listeDeBoutons.setVisibleRowCount(4);
 
 
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -34,13 +37,6 @@ public class Taquin extends JDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
-    private void initTableau() {
-    listeDeBoutons = new JList<>();
-    listeDeBoutons.setVisibleRowCount(4);
-
-
-
-    }
 
     private void winCase(){
 
